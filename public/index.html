@@ -12,12 +12,15 @@
     <!-- App CSS -->
     <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
     <link rel="stylesheet" href="/styles/nav.css" type="text/css" />
+    <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" />
 
     <!-- External JS -->
     <script type="text/javascript" src="/vendor/jquery-2.2.3.min.js"></script>
 
     <!-- App JS -->
     <script type="text/javascript" src="/scripts/app.js"></script>
+    <script type="text/javascript" src="/scripts/composer-char-counter.js"></script>
+
   </head>
 
   <body>
@@ -30,13 +33,28 @@
     <!-- Page-specific (main) content here -->
     <main class="container">
       <section class="new-tweet">
-        <h2>Compose Tweet</h2>
+        <h2 class="compose">Compose Tweet</h2>
+        <hr>
         <form>
           <textarea name="text" placeholder="What are you humming about?"></textarea>
           <input type="submit" value="Tweet">
           <span class="counter">140</span>
         </form>
       </section>
+
+        <!-- Tweets container -->
+        <section class="new-tweet">
+          <article>
+          <header>
+            <h2><img src="https://cdn2.iconfinder.com/data/icons/lil-faces/233/lil-face-4-512.png"/>
+             <span class="fullname"> Name here </span> <span class="handle"> @MrName</span>
+            </h2>
+          </header>
+          <div class="tweet">Little tweet here</div>
+          <footer>  10 days ago </footer>
+          </article>
+        </section>
+
     </main>
 
   </body>

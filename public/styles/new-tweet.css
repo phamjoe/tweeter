@@ -1,0 +1,78 @@
+.new-tweet{
+  /*padding: 0.5em;*/
+  background-color: #eee;
+  margin: 30px;
+  border: 1px solid #bbb;
+  border-radius: 5px;
+  opacity: 0.80;
+}
+.new-tweet .compose{
+  padding-left: 10px;
+}
+
+
+section:hover{
+border: 1px solid #000;
+  opacity: 1;
+
+}
+
+form{
+  padding: 0.5em;
+}
+header{
+  padding: 0.5em 0.5em 0em;
+
+}
+h2 {
+  margin-top: 5px;
+  margin-bottom: 0px;
+}
+hr {
+  margin-top: 0px;
+}
+textarea {
+  width:100%;
+  max-width: 100%;
+  min-width: 100%;
+  min-height: 5rem;
+  max-height: 15rem;
+  margin-top: 10px;
+  padding: 5px;
+}
+.counter {
+  float: right;
+  padding: 5px;
+  font-style: italic;
+}
+
+/*Tweets container*/
+.new-tweet .fullname{
+  vertical-align: top;
+  padding-left: 10px;
+}
+.new-tweet .handle{
+  float: right;
+  font-size: 0.65em;
+  font-weight: 300;
+  padding-top: 7px
+}
+header img {
+  width: 50px;
+  height: 50px;
+  margin-bottom:5px;
+}
+.tweet {
+  padding-top: 10px;
+  vertical-align: center;
+  background-color: #ffffff;
+  height: 6rem;
+}
+footer{
+  background-color: #ffffff;
+  padding: 10px;
+  border-top: 1px solid #bbb;
+  font-size: 0.7em;
+
+}
+
