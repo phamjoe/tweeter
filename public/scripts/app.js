@@ -14,9 +14,8 @@ $(document).ready(function() {
 //$('.container').append($tweet); // to add it to the page so we can make sure it's got all the right elements, classes, etc.
 
   function createTweetElement(tweet) {
-    let $tweet = $('<section>').addClass('new-tweet')
-                  .append($('<article>')
-                    .append($('<header>')
+    let $tweet = $('.tweet-list ').append($('<article>')
+                      .append($('<header>')
                       .append($('<h2>')
                         .append($('<img src=\"'+ tweet.user.avatars.small + '\"/>'))
                         .append($('<span>' + tweet.user.name + '</span>').addClass('fullname'))
@@ -29,20 +28,6 @@ $(document).ready(function() {
                           .append('<i class=\"fas fa-retweet\"></i></a>'))
                         .append($('<a href=\"'+ 'http://www.facebook.com' + '\">').addClass('foot-action')
                           .append('<i class=\"fas fa-heart\"></i></a>'))));
-    // let $tweet = $('.test ').append('<article>')
-    //                   .append($('<header>')
-    //                   .append($('<h2>')
-    //                     .append($('<img src=\"'+ tweet.user.avatars.small + '\"/>'))
-    //                     .append($('<span>' + tweet.user.name + '</span>').addClass('fullname'))
-    //                     .append($('<span>' + tweet.user.handle + '</span>').addClass('handle'))))
-    //                   .append($('<div>' + tweet.content.text + '</div>').addClass('tweet'))
-    //                   .append($('<footer>' + tweet.created_at + '</footer>')
-    //                     .append($('<a href=\"'+ 'http://www.youtube.ca' + '\">').addClass('foot-action')
-    //                       .append('<i class=\"fas fa-flag\"></i></a>'))
-    //                     .append($('<a href=\"'+ 'http://www.google.ca' + '\">').addClass('foot-action')
-    //                       .append('<i class=\"fas fa-retweet\"></i></a>'))
-    //                     .append($('<a href=\"'+ 'http://www.facebook.com' + '\">').addClass('foot-action')
-    //                       .append('<i class=\"fas fa-heart\"></i></a>')));
 
     // $tweet.find($(".profile-pic").attr(tweet.user.avatars.small));
     return $tweet;

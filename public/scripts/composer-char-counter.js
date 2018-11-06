@@ -1,8 +1,8 @@
 $(document).ready(function() {
   // --- our code goes here ---
-  // $( 'textarea' ).keyup(count);
-  // $( 'textarea' ).keydown(count);
-  $( 'textarea' ).on('input', count());
+  $( 'textarea' ).keyup(count);
+  $( 'textarea' ).keydown(count);
+  //$( 'textarea' ).on('input', count());
   function count(){
     var value = $( this ).val().length;
     var counter = $(this).siblings('.counter');
