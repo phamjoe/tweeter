@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="/vendor/normalize-4.1.1.css" type="text/css" />
 
     <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,300i,400,700,700i" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
 
     <!-- App CSS -->
     <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
@@ -20,7 +21,6 @@
     <!-- App JS -->
     <script type="text/javascript" src="/scripts/app.js"></script>
     <script type="text/javascript" src="/scripts/composer-char-counter.js"></script>
-
   </head>
 
   <body>
@@ -32,28 +32,34 @@
 
     <!-- Page-specific (main) content here -->
     <main class="container">
-      <section class="new-tweet">
+      <section class="new-tweet compose">
         <h2 class="compose">Compose Tweet</h2>
         <hr>
         <form>
-          <textarea name="text" placeholder="What are you humming about?"></textarea>
-          <input type="submit" value="Tweet">
+          <textarea name="text" id="text" placeholder="What are you humming about?"></textarea>
+          <input type="submit" id="submit" value="Tweet">
           <span class="counter">140</span>
         </form>
       </section>
 
         <!-- Tweets container -->
-        <section class="new-tweet">
+ <!--        <section class="new-tweet">
           <article>
           <header>
-            <h2><img src="https://cdn2.iconfinder.com/data/icons/lil-faces/233/lil-face-4-512.png"/>
+            <h2><img class="profile-pic" src="https://cdn2.iconfinder.com/data/icons/lil-faces/233/lil-face-4-512.png"/>
              <span class="fullname"> Name here </span> <span class="handle"> @MrName</span>
             </h2>
           </header>
           <div class="tweet">Little tweet here</div>
-          <footer>  10 days ago </footer>
+
+          <footer>  10 days ago
+            <a href="http://www.google.ca" class="foot-action"> <i class="fas fa-flag"></i> </a>
+            <a href="http://www.youtube.ca" class="foot-action"> <i class="fas fa-retweet"></i> </a>
+            <a href="http://www.facebook.com" class="foot-action"> <i class="fas fa-heart"></i> </a>
+
+          </footer>
           </article>
-        </section>
+        </section> -->
 
     </main>
 

@@ -9,14 +9,13 @@
 .new-tweet .compose{
   padding-left: 10px;
 }
-
-
-section:hover{
+section:hover {
 border: 1px solid #000;
   opacity: 1;
-
 }
-
+section:hover .foot-action{
+  opacity: 1;
+}
 form{
   padding: 0.5em;
 }
@@ -31,6 +30,8 @@ h2 {
 hr {
   margin-top: 0px;
 }
+
+/*Compose tweet section*/
 textarea {
   width:100%;
   max-width: 100%;
@@ -45,8 +46,11 @@ textarea {
   padding: 5px;
   font-style: italic;
 }
+.counter-invalid-msg {
+  color: red;
+}
 
-/*Tweets container*/
+/*Tweets section*/
 .new-tweet .fullname{
   vertical-align: top;
   padding-left: 10px;
@@ -64,6 +68,7 @@ header img {
 }
 .tweet {
   padding-top: 10px;
+  padding-left: 15px;
   vertical-align: center;
   background-color: #ffffff;
   height: 6rem;
@@ -73,6 +78,29 @@ footer{
   padding: 10px;
   border-top: 1px solid #bbb;
   font-size: 0.7em;
+}
+
+a:link{
+  color:#00a087;
+}
+a:visited{
+  color:#00a087;
+}
+a:hover{
+  color:#00a087;
+}
+
+section footer .foot-action{
+  opacity: 0;
+  float:right;
+  padding-left: 5px;
+}
+section footer {
+    border-radius: 5px;
 
 }
+div {
+  overflow: hidden;
+}
+
 

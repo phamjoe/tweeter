@@ -34,9 +34,9 @@ p {
   margin: 0px auto;*/
   margin: 100px auto;
   width: 450px;
-  height: 500px;
   background-color: #ffffff;
   padding-top: 15px;
+  padding-bottom: 15px;
   border-radius: 10px;
   }
 
