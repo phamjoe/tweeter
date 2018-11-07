@@ -11,7 +11,7 @@ $(document).ready(function() {
     if($counter.text() < 0){
       //counter.css('color', '#ff0000');
       $counter.addClass('counter-invalid-msg');
-      $button.prop('disabled', true);
+      //$button.prop('disabled', true);
     }
     else{
       //counter.css('color', '#000000');

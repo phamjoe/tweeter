@@ -1,26 +1,31 @@
+/*********************************new-tweet.scss*/
+
 .new-tweet {
-  /*padding: 0.5em;*/
   background-color: #fff;
-  margin: 30px;
-  border-radius: 5px;
+  margin: 1.8rem;
+  border-radius: 0.3rem;
   opacity: 0.8;
 }
 
 header {
   padding: 0.5em 0.5em 0em;
   background-color: #eee;
+  border-radius: 0.3rem;
 }
+
 h2 {
-  margin-top: 0px;
-  margin-bottom: 0px;
-  padding-top: 5px;
-  padding-left: 5px;
+  margin-top: 0rem;
+  margin-bottom: 0rem;
+  padding-top: 0.3rem;
+  padding-left: 0.3rem;
 }
+
 hr {
-  margin: 0px;
+  margin: 0rem;
 }
 
 /*********************************Compose tweet section*/
+
 section {
   background-color: white;
 }
@@ -28,7 +33,7 @@ section {
 form {
   background-color: #eee;
   padding: 0.5em;
-  border-radius: 5px;
+  border-radius: 0.3rem;
 }
 
 textarea {
@@ -37,44 +42,52 @@ textarea {
   min-width: 100%;
   min-height: 5rem;
   max-height: 15rem;
-  margin-top: 10px;
-  padding: 5px;
+  margin-top: 0.6rem;
+  padding: 0.3rem;
 }
+
 .counter {
   float: right;
   padding: 5px;
   font-style: italic;
 }
+
 .counter-invalid-msg {
   color: red;
 }
 
 .compose {
-  /*padding-left: 10px;*/
   background-color: #eee;
   border: 1px solid #888;
+  &:hover {
+    border: 1px solid #000;
+    opacity: 1;
+  }
 }
 
-.compose:hover {
-  border: 1px solid #000;
-  opacity: 1;
-}
-
+#submit {
+    background-color: #00a087;
+    opacity: 0.9;
+    color: #fff;
+    border-radius: 5px;
+    &:hover {
+      opacity: 1;
+    }
+  }
 /***************************************Tweets section*/
+
 article {
   width: 100%;
-  margin-bottom: 40px;
+  margin-bottom: 2.5rem;
   border: 1px solid #aaa;
-  border-radius: 5px;
-}
-
-article:hover {
-  border: 1px solid #000;
-  opacity: 1;
-}
-
-article:hover .foot-action {
-  opacity: 1;
+  border-radius: 0.3rem;
+  &:hover {
+    border: 1px solid #000;
+    opacity: 1;
+    .foot-action {
+      opacity: 1;
+    }
+  }
 }
 
 .tweet-list {
@@ -82,16 +95,17 @@ article:hover .foot-action {
   flex-wrap: wrap-reverse;
 }
 
-.new-tweet .fullname {
-  vertical-align: top;
-  padding-left: 10px;
-}
-
-.new-tweet .handle {
-  float: right;
-  font-size: 0.65em;
-  font-weight: 300;
-  padding-top: 7px;
+.new-tweet {
+  .fullname {
+    vertical-align: top;
+    padding-left: 0.6rem;
+  }
+  .handle {
+    float: right;
+    font-size: 0.65em;
+    font-weight: 300;
+    padding-top: 7px;
+  }
 }
 
 header img {
@@ -114,33 +128,29 @@ div {
 
 footer {
   background-color: #ffffff;
-  padding: 10px;
+  padding: 0.6rem;
   border-top: 1px solid #bbb;
   border-bottom: 1px solid #bbb;
   font-size: 0.7em;
-  border-radius: 5px;
+  border-radius: 0.3rem;
 }
 
-a:link {
-  color: #00a087;
-}
-a:visited {
-  color: #00a087;
-}
-a:hover {
-  color: #00a087;
+a {
+  &:link, &:visited, &:hover {
+    color: #00a087;
+  }
 }
 
 section footer .foot-action {
   opacity: 0;
   float: right;
-  padding-left: 5px;
+  padding-left: 0.3rem;
 }
+
 
 /***************************************Error message*/
 
 .error-msg {
   color: #cc0000;
-  background-color: ;
-  padding: 10px;
+  padding: 0.6rem;
 }

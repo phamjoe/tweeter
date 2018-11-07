@@ -6,7 +6,6 @@
 
 // Test / driver code (temporary). Eventually will get this from the server.
 
-
 $(document).ready(function() {
   const $compose = $('.compose');
   const $error = $('.error-msg');
@@ -32,7 +31,7 @@ $(document).ready(function() {
         )
         .append($(escapeText).addClass('tweet'))
         .append(
-          $('<footer>' + tweet.created_at + '</footer>')
+          $('<footer>' + calcDateDiff(tweet.created_at) + '</footer>')
             .append(
               $('<a href="' + 'http://www.youtube.ca' + '">')
                 .addClass('foot-action')
@@ -71,8 +70,33 @@ $(document).ready(function() {
       }
     });
   }
-
   loadTweets();
+
+  function calcDateDiff(date) {
+    const today = new Date();
+    const givenDate = new Date(date);
+    const timeDiff = Math.abs(today.getTime() - givenDate.getTime());
+    const days = Math.ceil(timeDiff / (1000 * 3600 * 24)) - 1;
+    const minutes = Math.ceil(timeDiff /60000);
+    const hours = Math.ceil(minutes / 60);
+    if(days > 365){
+      return `Over ${(Math.ceil(days / 365))} years ago`;
+    }
+    else if(days > 30){
+      return `Over ${(Math.ceil(days / 365))} months ago`;
+    }
+    else if(days > 1){
+      return `${(Math.ceil(days / 365))} days ago`;
+    }
+    else if(hours < 24 && hours > 1){
+      return `${hours} hours ago`;
+    }
+    else{
+      return `${minutes} minutes ago`;
+    }
+    return;
+  }
+
 
   $('form').on('submit', function(event) {
 
@@ -81,11 +105,13 @@ $(document).ready(function() {
     //TODO: check string length not serialized length
     let stringData = $('form').children('textarea');
     let data = $(this).serialize();
-    console.log(stringData);
-    if ($('textarea', this).val().trim() === '') {
+    if ($('textarea',this).val().trim() === '') {
       $error.slideDown();
-    } else if (stringData.length > 140) {
-        alert('Character length exceeded');
+      $error.text(" Error: Tweet cannot be empty");
+    } else if ($('textarea',this).val().length > 140) {
+      $error.slideDown();
+      $error.text(" Error: Tweet exceeded 140 characters");
+
     } else {
       $error.hide();
       $.ajax({
