@@ -17,7 +17,7 @@ $(document).ready(function() {
     $('.tweet-text').focus();
   });
 
-  function createTweetElement(tweet) {
+  const createTweetElement = (tweet) => {
     let escapeText = $('<div>').text(tweet.content.text);
     let $tweet = $('.tweet-list ').append(
       $('<article>')
@@ -31,7 +31,7 @@ $(document).ready(function() {
         )
         .append($(escapeText).addClass('tweet'))
         .append(
-          $('<footer>' + calcDateDiff(tweet.created_at) + '</footer>')
+          $('<footer>' + calculateDate(tweet.created_at) + '</footer>')
             .append(
               $('<a href="' + 'http://www.youtube.ca' + '">')
                 .addClass('foot-action')
@@ -52,7 +52,7 @@ $(document).ready(function() {
     return $tweet;
   }
 
-  function renderTweets(tweets) {
+  const renderTweets = (tweets) => {
     // loops through tweets
     // calls createTweetElement for each tweet
     // takes return value and appends it to the tweets container
@@ -61,7 +61,7 @@ $(document).ready(function() {
     });
   }
 
-  function loadTweets() {
+  const loadTweets = () => {
     $.ajax({
       method: 'GET',
       url: '/tweets',
@@ -70,39 +70,41 @@ $(document).ready(function() {
       }
     });
   }
+
   loadTweets();
 
-  function calcDateDiff(date) {
+    const calculateDate = (date) => {
     const today = new Date();
     const givenDate = new Date(date);
     const timeDiff = Math.abs(today.getTime() - givenDate.getTime());
     const days = Math.ceil(timeDiff / (1000 * 3600 * 24)) - 1;
     const minutes = Math.ceil(timeDiff /60000);
     const hours = Math.ceil(minutes / 60);
-    if(days > 365){
-      return `Over ${(Math.ceil(days / 365))} years ago`;
+    const fullDate = `${givenDate.toLocaleString('en-US', { hour: 'numeric', minute: 'numeric', hour12: true })} -
+                      ${givenDate.getDate()}
+                      ${givenDate.toLocaleString('en-US', {month:'short'})}
+                      ${givenDate.getFullYear()} `;
+      if(days > 365){
+        return `${fullDate} (${(Math.floor(days / 365))} years ago)`;
+      }
+      else if(days > 30){
+        return `${fullDate} (${(Math.floor(days / 365))} months ago)`;
+      }
+      else if(days > 1){
+        return `${fullDate} (${(Math.ceil(days / 365))} days ago)`;
+      }
+      else if(hours < 24 && hours > 1){
+        return `${fullDate} (${hours} hours ago)`;
+      }
+      else{
+        return `${fullDate} (${minutes} minutes ago)`;
+      }
+      return 0;
     }
-    else if(days > 30){
-      return `Over ${(Math.ceil(days / 365))} months ago`;
-    }
-    else if(days > 1){
-      return `${(Math.ceil(days / 365))} days ago`;
-    }
-    else if(hours < 24 && hours > 1){
-      return `${hours} hours ago`;
-    }
-    else{
-      return `${minutes} minutes ago`;
-    }
-    return;
-  }
 
 
   $('form').on('submit', function(event) {
-
     event.preventDefault();
-
-    //TODO: check string length not serialized length
     let stringData = $('form').children('textarea');
     let data = $(this).serialize();
     if ($('textarea',this).val().trim() === '') {
@@ -111,7 +113,6 @@ $(document).ready(function() {
     } else if ($('textarea',this).val().length > 140) {
       $error.slideDown();
       $error.text(" Error: Tweet exceeded 140 characters");
-
     } else {
       $error.hide();
       $.ajax({
@@ -121,6 +122,7 @@ $(document).ready(function() {
       }).done(function() {
         $('form')[0].reset();
         $('.counter').html(140);
+        $('.tweet-list').empty();
         loadTweets();
       });
     }
