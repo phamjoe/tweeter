@@ -11,8 +11,6 @@
 
 }
 
-
-
 #nav-bar .logo {
   float : left;
   width:80px;
@@ -25,4 +23,18 @@
   font-size: 2rem;
   line-height: 260%;
   color: white;
+}
+
+#nav-bar .compose-btn{
+  float: right;
+  width: 7em;
+  height: 3em;
+  margin-top: 17px;
+  background-color: #eee;
+  opacity: 0.7;
+  border-radius: 5px;
+}
+
+#nav-bar .compose-btn:hover {
+  opacity: 1;
 }

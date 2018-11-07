@@ -1,24 +1,14 @@
-
-.new-tweet{
+.new-tweet {
   /*padding: 0.5em;*/
   background-color: #fff;
   margin: 30px;
   border-radius: 5px;
-  opacity: 0.80;
+  opacity: 0.8;
 }
 
-article:hover {
-  border: 1px solid #000;
-  opacity: 1;
-}
-article:hover .foot-action{
-  opacity: 1;
-}
-
-header{
+header {
   padding: 0.5em 0.5em 0em;
-    background-color: #eee;
-
+  background-color: #eee;
 }
 h2 {
   margin-top: 0px;
@@ -30,20 +20,19 @@ hr {
   margin: 0px;
 }
 
-
 /*********************************Compose tweet section*/
-section{
+section {
   background-color: white;
 }
 
-form{
+form {
   background-color: #eee;
   padding: 0.5em;
   border-radius: 5px;
 }
 
 textarea {
-  width:100%;
+  width: 100%;
   max-width: 100%;
   min-width: 100%;
   min-height: 5rem;
@@ -60,80 +49,98 @@ textarea {
   color: red;
 }
 
-.compose{
+.compose {
   /*padding-left: 10px;*/
   background-color: #eee;
   border: 1px solid #888;
 }
 
 .compose:hover {
-border: 1px solid #000;
+  border: 1px solid #000;
   opacity: 1;
 }
 
-/**********************************Tweets section*/
-.tweet-list {
-  display: flex;
-  flex-wrap: wrap-reverse;
-}
-
+/***************************************Tweets section*/
 article {
   width: 100%;
   margin-bottom: 40px;
   border: 1px solid #aaa;
   border-radius: 5px;
 }
-.new-tweet .fullname{
+
+article:hover {
+  border: 1px solid #000;
+  opacity: 1;
+}
+
+article:hover .foot-action {
+  opacity: 1;
+}
+
+.tweet-list {
+  display: flex;
+  flex-wrap: wrap-reverse;
+}
+
+.new-tweet .fullname {
   vertical-align: top;
   padding-left: 10px;
 }
-.new-tweet .handle{
+
+.new-tweet .handle {
   float: right;
   font-size: 0.65em;
   font-weight: 300;
-  padding-top: 7px
+  padding-top: 7px;
 }
+
 header img {
   width: 50px;
   height: 50px;
-  margin-bottom:5px;
+  margin-bottom: 5px;
 }
+
 .tweet {
-  padding-top: 10px;
-  padding-left: 15px;
+  padding: 10px 15px 5px;
   vertical-align: center;
   background-color: #ffffff;
   height: 6rem;
+  word-break: break-word;
 }
-footer{
+
+div {
+  overflow: hidden;
+}
+
+footer {
   background-color: #ffffff;
   padding: 10px;
   border-top: 1px solid #bbb;
   border-bottom: 1px solid #bbb;
   font-size: 0.7em;
+  border-radius: 5px;
 }
 
-a:link{
-  color:#00a087;
+a:link {
+  color: #00a087;
 }
-a:visited{
-  color:#00a087;
+a:visited {
+  color: #00a087;
 }
-a:hover{
-  color:#00a087;
+a:hover {
+  color: #00a087;
 }
 
-section footer .foot-action{
+section footer .foot-action {
   opacity: 0;
-  float:right;
+  float: right;
   padding-left: 5px;
 }
-section footer {
-  border-radius: 5px;
 
+/***************************************Error message*/
+
+.error-msg {
+  color: #cc0000;
+  background-color: ;
+  padding: 10px;
 }
-div {
-  overflow: hidden;
-}
-
-
