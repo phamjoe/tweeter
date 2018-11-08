@@ -16,16 +16,20 @@
     <script type="text/javascript" src="/vendor/jquery-2.2.3.min.js"></script>
 
     <!-- App JS -->
-    <script type="text/javascript" src="/scripts/app.js"></script>
     <script type="text/javascript" src="/scripts/composer-char-counter.js"></script>
+    <script type="text/javascript" src="/scripts/app.js"></script>
+    <script type="text/javascript" src="/scripts/likes.js"></script>
+
   </head>
 
   <body>
+
+
     <!-- Top nav bar (fixed) -->
     <nav id="nav-bar">
       <img class="logo" src="/images/bird.png">
       <span class="header">Tweeter</span>
-      <button type="submit" class="compose-btn"> <i class="fas fa-edit"></i>Compose </button>
+      <button type="submit" class="compose-btn"> <i class="fas fa-edit"></i>    Compose </button>
     </nav>
 
     <!-- Page-specific (main) content here -->
@@ -36,7 +40,7 @@
         <form>
           <textarea name="text" class="tweet-text" placeholder="What are you humming about?"></textarea>
           <input type="submit" id="submit" value="Tweet">
-          <span class="counter">140</span>
+          <span class="counter">140 characters left</span>
         </form>
         <div class="error-msg"> </div>
       </section>
@@ -45,8 +49,6 @@
       <section class="new-tweet tweet-list">
 
       </section>
-
     </main>
-
   </body>
 </html>

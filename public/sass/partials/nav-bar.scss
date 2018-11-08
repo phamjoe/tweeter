@@ -1,10 +1,10 @@
 /*********************************nav-bar.scss*/
-
+// https://coolors.co/48beff-3dfaff-43c59e-3d7068-14453d
 #nav-bar {
   display: block;
   height: 80px;
   width: 100%;
-  background-color: #00a087;
+  background-color: #43C59E; //#00a087;
   font-color: #e8fdff;
   padding: 0px 2em;
   position: fixed;
@@ -27,8 +27,9 @@
     width: 7em;
     height: 3em;
     margin-top: 17px;
-    background-color: #eee;
-    opacity: 0.7;
+    background-color: #3D7068;
+    color: white;
+    opacity: 0.8;
     border-radius: 5px;
     &:hover {
       opacity: 1;

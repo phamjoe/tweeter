@@ -1,8 +1,11 @@
 "use strict";
 
 // Basic express setup:
-
-const PORT          = 8080;
+const PORT = process.env.PORT;
+if (PORT == null || PORT == "") {
+  PORT = 8080;
+}
+//const PORT          = 8080;
 const express       = require("express");
 const bodyParser    = require("body-parser");
 const app           = express();
@@ -22,12 +25,10 @@ MongoClient.connect(MONGODB_URI, (err, db) => {
     console.error(`Failed to connect: ${MONGODB_URI}`);
     throw err;
   }
-
-//const db = require('./lib/in-memory-db');
-
 console.log(`Connected to mongodb: ${MONGODB_URI}`);
 const DataHelpers = require("./lib/data-helpers.js")(db);
 const tweetsRoutes = require("./routes/tweets")(DataHelpers);
+
   // We have a connection to the "tweeter" db, starting here.
 
   // ==> Later it can be invoked. Remember even if you pass

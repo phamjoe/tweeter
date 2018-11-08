@@ -66,9 +66,10 @@ textarea {
 }
 
 #submit {
-    background-color: #00a087;
+  margin-top: 0.5rem;
+    background-color: #FFDF94;
     opacity: 0.9;
-    color: #fff;
+    color: #333;
     border-radius: 5px;
     &:hover {
       opacity: 1;
@@ -136,21 +137,22 @@ footer {
   border-radius: 0.3rem;
 }
 
-a {
-  &:link, &:visited, &:hover {
-    color: #00a087;
-  }
-}
-
-section footer .foot-action {
+.foot-action {
   opacity: 0;
   float: right;
   padding-left: 0.3rem;
+  color: #00a087;
 }
 
+.like-btn {
+  cursor: pointer;
+  padding:0;
+  border: 0;
+  background:none;
+  outline:none
+}
 
 /***************************************Error message*/
-
 .error-msg {
   color: #cc0000;
   padding: 0.6rem;
