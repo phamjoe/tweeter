@@ -1,7 +1,7 @@
 "use strict";
 
 // Basic express setup:
-const PORT = process.env.PORT;
+let PORT = process.env.PORT;
 if (PORT == null || PORT == "") {
   PORT = 8080;
 }
