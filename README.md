@@ -22,8 +22,11 @@ This repository is the starter code for the project: Students will fork and clon
 - Responsive design; compatible on mobile devices
 
 ## Final Product
+1. Main Page
 !["Screenshot of main page" ](https://github.com/phamjoe/tweeter/blob/master/docs/main.png)
+2. Compose a Tweet
 !["Screenshot of compose tweet" ](https://github.com/phamjoe/tweeter/blob/master/docs/compose.png)
+3. Mobile Device
 !["Screenshot on mobile device" ](https://github.com/phamjoe/tweeter/blob/master/docs/mobile.png)
 
 

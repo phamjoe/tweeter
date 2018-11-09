@@ -5,14 +5,12 @@
  */
 
 // Test / driver code (temporary). Eventually will get this from the server.
-
 $(document).ready(function() {
   /****************************************** Compose button toggle */
   const $compose = $('.compose');
   const $error = $('.error-msg');
   $error.hide();
   $compose.hide();
-
   $('.compose-btn').click(function() {
     $compose.slideToggle('fast', function() {});
     $('.tweet-text').focus();

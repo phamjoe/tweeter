@@ -3,7 +3,7 @@ $(document).ready(function() {
   $('textarea').on('input', function() {
     let $value = $(this).val().length;
     let $counter = $(this).siblings('.counter');
-    $counter.text(140 - $value) ;
+    $counter.text(140 - $value);
     if ($counter.text() < 0) {
       $counter.addClass('counter-invalid-msg');
       $counter.append(' characters left');
