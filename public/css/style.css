@@ -116,6 +116,7 @@ body {
 /* Landscape phone to portrait tablet */
 @media screen and (max-width: 768px) {
   #nav-bar {
+    padding-right: 15px;
     padding-left: 10px; }
     #nav-bar .group {
       width: 57%;
