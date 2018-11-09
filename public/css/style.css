@@ -131,7 +131,7 @@ body {
 /* Landscape phones and down */
 @media (max-width: 480px) {
   .header {
-    font-size: 8rem; }
+    font-size: 1rem; }
   .fa-edit {
     width: 1px;
     height: 1px; }
@@ -140,7 +140,7 @@ body {
 
 @media (max-width: 360px) {
   .header {
-    font-size: 8rem; }
+    font-size: 1rem; }
   .fas .fa-edit {
     width: 15%;
     height: 15%; }
