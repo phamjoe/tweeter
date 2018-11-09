@@ -89,9 +89,9 @@ $(document).ready(function() {
       return `${fullDate} (${Math.floor(days / 365)} years ago)`;
     } else if (days > 30) {
       return `${fullDate} (${Math.floor(days / 365)} months ago)`;
-    } else if (days > 1) {
+    } else if (hours > 24) {
       return `${fullDate} (${Math.ceil(days / 365)} days ago)`;
-    } else if (hours < 24 && hours > 1) {
+    } else if (minutes > 60) {
       return `${fullDate} (${hours} hours ago)`;
     } else {
       return `${fullDate} (${minutes} minutes ago)`;
