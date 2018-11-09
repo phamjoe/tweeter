@@ -15,3 +15,15 @@ This repository is the starter code for the project: Students will fork and clon
 
 - Express
 - Node 5.10.x or above
+
+## Features
+
+- Able to compose a tweet which is then sent to MongoDB server
+- Responsive design; compatible on mobile devices
+
+## Final Product
+!["Screenshot of main page" ](https://github.com/phamjoe/tweeter/tree/master/docs/main.png)
+!["Screenshot of compose tweet" ](https://github.com/phamjoe/tweeter/tree/master/docs/compose.png)
+!["Screenshot on mobile device" ](https://github.com/phamjoe/tweeter/tree/master/docs/mobile.png)
+
+
