@@ -31,7 +31,7 @@ body {
 }
 
 /* Portrait tablet and small desktops */
-@media (max-width: 940px) {
+@media screen and (max-width: 940px) {
   .container{
     margin: 10% auto;
     width: 70%;
@@ -39,7 +39,7 @@ body {
 }
 
 /* Landscape phone to portrait tablet */
-@media (max-width: 768px) {
+@media screen and (max-width: 768px) {
   .container{
     margin: 15% auto;
     width: 70%;
@@ -47,7 +47,7 @@ body {
 }
 
 /* Landscape phones and down */
-@media (max-width: 480px) {
+@media screen and (max-width: 480px) {
   .container{
     margin: 16% auto;
     width: 100%;

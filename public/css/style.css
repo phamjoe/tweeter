@@ -35,19 +35,19 @@ body {
   border-radius: 10px; }
 
 /* Portrait tablet and small desktops */
-@media (max-width: 940px) {
+@media screen and (max-width: 940px) {
   .container {
     margin: 10% auto;
     width: 70%; } }
 
 /* Landscape phone to portrait tablet */
-@media (max-width: 768px) {
+@media screen and (max-width: 768px) {
   .container {
     margin: 15% auto;
     width: 70%; } }
 
 /* Landscape phones and down */
-@media (max-width: 480px) {
+@media screen and (max-width: 480px) {
   .container {
     margin: 16% auto;
     width: 100%; } }
@@ -106,7 +106,7 @@ body {
       opacity: 1; }
 
 /* Portrait tablet and small desktops */
-@media (max-width: 940px) {
+@media screen and (max-width: 940px) {
   #nav-bar .header {
     font-size: 2rem; }
   #nav-bar .compose-btn {
@@ -114,7 +114,7 @@ body {
     font-size: 1rem; } }
 
 /* Landscape phone to portrait tablet */
-@media (max-width: 768px) {
+@media screen and (max-width: 768px) {
   #nav-bar {
     padding-left: 10px; }
     #nav-bar .header {
@@ -129,7 +129,7 @@ body {
       height: 50px; } }
 
 /* Landscape phones and down */
-@media (max-width: 480px) {
+@media screen and (max-width: 480px) {
   .header {
     font-size: 1rem; }
   .fa-edit {
@@ -138,7 +138,7 @@ body {
   .compose-btn {
     font-size: 0.5em; } }
 
-@media (max-width: 360px) {
+@media screen and (max-width: 360px) {
   .header {
     font-size: 1rem; }
   .fas .fa-edit {
