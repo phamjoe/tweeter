@@ -49,7 +49,14 @@ body {
 /* Landscape phones and down */
 @media (max-width: 480px) {
   .container{
-    margin: 20% auto;
+    margin: 16% auto;
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  .container{
+    margin: 16% auto;
     width: 100%;
   }
 }

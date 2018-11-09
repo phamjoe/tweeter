@@ -4,7 +4,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 8%;
+  height: 80px;
   width: 100%;
   background-color: #43C59E; //#00a087;
   font-color: #e8fdff;
@@ -12,10 +12,11 @@
   position: fixed;
   top: 0px;
   z-index: 1;
+
   .group {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
   }
   .logo {
@@ -45,26 +46,64 @@
 
 /* Portrait tablet and small desktops */
 @media (max-width: 940px) {
-  .compose-btn {
-
+  #nav-bar{
+    .header{
+      font-size: 2rem;
+    }
+    .compose-btn {
+    width:20%;
+      font-size: 1rem;
+    }
   }
 }
 
 /* Landscape phone to portrait tablet */
 @media (max-width: 768px) {
-  .compose-btn {
-
+  #nav-bar{
+    padding-left:10px;
+    .header{
+      font-size: 1.5rem;
+    }
+    .compose-btn {
+      font-size: 0.6rem;
+      width: 20%;
+    }
+    .fa-edit {
+      padding-right: 10px;
+    }
+    .logo{
+      width: 50px;
+      height:50px;
+    }
   }
 }
 
 /* Landscape phones and down */
 @media (max-width: 480px) {
-  .compose-btn {
-    font-size: 1rem;
+      .header{
+        font-size: 8rem;
+      }
+
+      .fa-edit{
+        width: 1px;
+        height: 1px;
+      }
+      .compose-btn {
+        font-size: 0.5em;
+    }
   }
 
-  .fa-edit{
-    width: 1px;
-    height: 1px;
-  }
+@media (max-width: 360px) {
+    .header{
+      font-size: 8rem;
+    }
+
+    .fas .fa-edit{
+      width: 15%;
+      height: 15%;
+    }
+    .compose-btn {
+      width: 30%;
+      font-size: 0.5em;
+    }
 }
