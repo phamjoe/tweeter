@@ -35,9 +35,7 @@ $(document).ready(function() {
         .append(
           $('<footer>' + calculateDate(tweet.created_at) + '</footer>')
             .append(
-              $('<i class="fas fa-flag" ></i>').addClass('foot-action')
-              // .append('<i class="fas fa-flag"></i></a>')
-            )
+              $('<i class="fas fa-flag" ></i>').addClass('foot-action'))
             .append($('<i class="fas fa-retweet"></i>').addClass('foot-action'))
             .append(
               $('<button class="like-btn"><i class="fas fa-heart"></i></button>').addClass(

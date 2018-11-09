@@ -75,6 +75,8 @@ textarea {
       opacity: 1;
     }
   }
+
+
 /***************************************Tweets section*/
 
 article {
@@ -94,7 +96,7 @@ article {
 .tweet-list {
   display: flex;
   flex-wrap: wrap-reverse;
-}
+  }
 
 .new-tweet {
   .fullname {

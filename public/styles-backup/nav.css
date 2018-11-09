@@ -1,6 +1,6 @@
 #nav-bar{
   display: block;
-  height: 80px;
+  height: 10%;
   width: 100%;
   background-color: #00a087;
   font-color: #e8fdff;
@@ -37,4 +37,19 @@
 
 #nav-bar .compose-btn:hover {
   opacity: 1;
+}
+
+@media (max-width: 600px){
+  #nav-bar{
+  display: block;
+  height: 30%;
+  width: 100%;
+  background-color: #00a087;
+  font-color: #e8fdff;
+  padding: 0px 2em;
+  position: fixed;
+  top: 0px;
+  z-index: 1;
+
+}
 }

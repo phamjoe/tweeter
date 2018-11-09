@@ -12,6 +12,7 @@ html {
 }
 
 body {
+  display: flex;
   margin: 0;
   color: #244751;
   background-color: #eee;
@@ -19,10 +20,36 @@ body {
 }
 
 .container {
+  display: flex;
+  flex-direction: column;
   margin: 7% auto;
-  width: 450px;
+  width: 50%;
   background-color: #ffffff;
   padding-top: 15px;
   padding-bottom: 15px;
   border-radius: 10px;
+}
+
+/* Portrait tablet and small desktops */
+@media (max-width: 940px) {
+  .container{
+    margin: 10% auto;
+    width: 70%;
+  }
+}
+
+/* Landscape phone to portrait tablet */
+@media (max-width: 768px) {
+  .container{
+    margin: 15% auto;
+    width: 70%;
+  }
+}
+
+/* Landscape phones and down */
+@media (max-width: 480px) {
+  .container{
+    margin: 20% auto;
+    width: 100%;
+  }
 }
