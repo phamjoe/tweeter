@@ -61,6 +61,10 @@
 @media screen and (max-width: 768px) {
   #nav-bar{
     padding-left:10px;
+    .group{
+      width:57%;
+      justify-content: space-between;
+    }
     .header{
       font-size: 1.5rem;
     }
